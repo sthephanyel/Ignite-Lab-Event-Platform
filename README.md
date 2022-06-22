@@ -1,7 +1,7 @@
 # Ignite-Lab-Event-Platform
 
 Evento disponibilidado pela Rocketseat no evento Ignite Lab (19/06-24/06)
-# Tecnologias utilizadas:
+## Tecnologias utilizadas:
 >React js <br/>
 >Vite Js <br/>
 >Typescript <br/>
