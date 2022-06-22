@@ -2,7 +2,7 @@
 
 Evento disponibilidado pela Rocketseat no evento Ignite Lab (19/06-24/06)
 # Tecnologias utilizadas:
->React js
+>React js <br/>
 >Vite Js
 >Typescript
 >TailwindCss
