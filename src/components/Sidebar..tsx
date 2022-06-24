@@ -2,6 +2,7 @@
 import { gql, useQuery } from "@apollo/client";
 import { Lesson } from "./Lesson";
 
+//acessa p graphcms, pegando as informações necessárias para configurar a pagina
 const GET_LESSONS_QUERY = gql`
     query{
         lessons(orderBy: availableAt_ASC, stage: PUBLISHED){

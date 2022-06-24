@@ -5,6 +5,9 @@ import { CheckCircle, Lock } from 'phosphor-react';
 import {isPast, format} from 'date-fns';
 import ptBR from 'date-fns/locale/pt-BR';
 
+//controle de rotas com o react-router-dom, funciona como um <a></a> redirecionando para outra pagina com o clique
+import { Link } from 'react-router-dom';
+
 //define o type dos valores que poderam ser utilizados na requisição do graphCMS
 interface LessonProps{
     title: string;
@@ -21,11 +24,11 @@ export function Lesson(props: LessonProps){
         locale: ptBR,
     })
     return(
-    <a href="#">
+    <Link to={`/event/lesson/${props.slug}`} className="group">
         <span className="text-gray-300">
             {availableDateFormatted}
         </span>
-        <div className="rounded border border-gray-500 p-4 mt-2">
+        <div className="rounded border border-gray-500 p-4 mt-2 group-hover:border-green-500">
             <header className="flex items-center justify-between">
                 {/* Esse campo é um condicional, caso a condição seja true, as primeiras linhas de codigo são uasdas */}
                 {/* caso seja false, o outro bloco de codigo, separado por " : " será utilizado */}
@@ -48,6 +51,6 @@ export function Lesson(props: LessonProps){
                 {props.title}
             </strong>
         </div>
-    </a>
+    </Link>
     );
 }
