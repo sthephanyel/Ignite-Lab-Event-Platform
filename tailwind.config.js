@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage:{
+        blur: 'url(/src/assets/blur-background.png)'
+      },
       //define um valor de texto padrão que será usado na aplicação
       fontFamily: {
         sans: 'Roboto, sans-serif',

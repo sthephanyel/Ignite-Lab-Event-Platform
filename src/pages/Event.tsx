@@ -13,7 +13,7 @@ export function Event(){
             {/* desafio, mostrar alguma mensagem ou algo padrao */}
             {slug 
             ? <Video lessonSlug={slug}/> 
-            : <div className="flex-1"></div>}
+            : <div className="flex-1">Nem uma Aula Selecionada</div>}
             <Sidebar/>
           </main>
         </div>
