@@ -5,7 +5,7 @@ Evento disponibilidado pela Rocketseat no evento Ignite Lab (19/06-24/06)
 >React js <br/>
 >Vite Js <br/>
 >Typescript <br/>
->TailwindCss <br/>
+>TailwindCss <br/> 
 >GraphCMS <br/>
 >GraphQL <br/>
 >Apollo <br/>
