@@ -2,18 +2,19 @@ import { gql, useMutation } from "@apollo/client";
 import { useState, FormEvent } from "react";
 import { useNavigate } from "react-router-dom";
 import { Logo } from "../components/Logo";
+import { useCreateSubscriberMutation } from "../graphql/generated";
 
 //Essa solicitação "mutation", envia os dados para o graphcms, para ser cadastrado um novo nome e email no Subscriber
 //É recomendado que esses dados não seja enviados diretamente pelo Front, e sim que a requisição seja enviadad para um Back-end, e lá o mesmo realizar a operação.
 //Mas como é quesstão de estudo e os dados são simples, será realizada atraves do Front
-const CREATE_SUBSCRIBER_MUTATION=gql`
-    # Esse parametro além de criar um novo campo com os dados, solicita o id para ser utilizado posteriormente
-    mutation CreateSubscriber($name: String!, $email: String!) {
-        createSubscriber(data: {name: $name, email: $email}) {
-        id
-        }
-    }
-`;
+// const CREATE_SUBSCRIBER_MUTATION=gql`
+//     # Esse parametro além de criar um novo campo com os dados, solicita o id para ser utilizado posteriormente
+//     mutation CreateSubscriber($name: String!, $email: String!) {
+//         createSubscriber(data: {name: $name, email: $email}) {
+//         id
+//         }
+//     }
+// `;
 
 
 export function Subscribe(){
@@ -24,8 +25,9 @@ export function Subscribe(){
 
     //Diferente do useQuery, o multation não precisa ser renderizado logo após a inicialização da pagina
     //então como parametro, e passado a função 'createSubscriber', ou seja, só será executado quando o mesmo for solicitado
-    const [createSubscriber, { loading }] = useMutation(CREATE_SUBSCRIBER_MUTATION);
+    // const [createSubscriber, { loading }] = useMutation(CREATE_SUBSCRIBER_MUTATION);
 
+    const [createSubscriber, { loading }] = useCreateSubscriberMutation();
 
     async function handleSubscribe(event: FormEvent){
         event.preventDefault();
