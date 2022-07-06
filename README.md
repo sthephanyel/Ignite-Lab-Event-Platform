@@ -1,6 +1,11 @@
 # Ignite-Lab-Event-Platform
 
-Evento disponibilidado pela Rocketseat no evento Ignite Lab (19/06-24/06)
+Evento disponibilidado pela Rocketseat no evento Ignite Lab (19/06-24/06) <br/>
+Consiste em uma aplicação Web, que disponibiliza uma pagina de inscrição para um evento online e <br/>
+video aulas online liberadas nos dias pre definidos anteriormente pelo dono da plataforma. <br/>
+<br/>
+A aplicação trabalha em conjunto utilizando React Js para a construção do Front-end e o GraphQl (GraphCMS) para o controle, consumo e edição de dados.<br/>
+<br/>
 ## Tecnologias utilizadas:
 >React js <br/>
 >Vite Js <br/>
